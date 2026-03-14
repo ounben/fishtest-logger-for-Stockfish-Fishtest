@@ -59,8 +59,18 @@ Fishtest workers often output logs in rapid bursts. Docker often transmits these
 
 ### Parsing Logic
 The results are extracted using the following Regular Expression:
+
 `Finished game (?P<log_id>\d+) \((?P<white>.*?) vs (?P<black>.*?)\): (?P<res>[\d/1-]+) \{(?P<reason>.*?)\}`
 
-## License
+`Finished game 62 (Base-b3a810a1c4 vs New-9cf4e41d1b): 1/2-1/2 {Draw by 3-fold repetition} `
 
-This project is licensed under the MIT License.
+`Finished game 47 (New-9cf4e41d1b vs Base-b3a810a1c4): 1-0 {White wins by adjudication}`
+
+`Finished game 63 (New-db0fea68e7 vs Base-b3a810a1c4): 1-0 {White mates}`
+
+`Finished game 60 (Base-b3a810a1c4 vs New-db0fea68e7): 1/2-1/2 {Draw by insufficient mating material}`
+
+`Finished game 46 (Base-b3a810a1c4 vs New-9cf4e41d1b): 1/2-1/2 {Draw by stalemate}`
+
+
+
